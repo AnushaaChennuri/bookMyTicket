@@ -1,0 +1,21 @@
+table, th, td {
+    border: 1px solid white;
+    background-color: black;
+  }
+  button{
+    background-color: green;
+  }
+th{
+    height:70px;
+}
+li{
+  background-color:forestgreen;
+}
+
+li a{
+  color:white
+}
+
+a:active{
+  background-color: cyan;
+}

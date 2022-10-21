@@ -1,0 +1,29 @@
+.btn-group button {
+    background-color: #04AA6D; 
+    border: 1px solid green;
+    color: white;
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
+  }
+  
+
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
+  .btn-group button:focus {
+    background-color: #3e8e41;
+  }
+
+  table{
+    background-color: black;
+  }
+  

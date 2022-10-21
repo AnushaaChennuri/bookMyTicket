@@ -1,0 +1,63 @@
+<h1 class="display-3 text-center text-white"><i>Users</i></h1>
+
+<form #ref="ngForm" (ngSubmit)="onsave(ref.value)">
+<table class="table table-dark text-white">
+        <thead>
+          <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Date Booked</th>
+            <th scope="col">show Timings</th>
+            <th scope="col">Tickets Booked</th>
+            <th scope="col">Movie Booked</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of displaydata;let idx=index">
+            <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.username}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text" name="username" id="un" [(ngModel)]="edituserobj.username"></span>
+            </td>
+              
+          
+            <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.PhoneNumber}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text" name="PhoneNumber" id="pno" [(ngModel)]="edituserobj.PhoneNumber"></span>
+            </td>
+
+            <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.DateBooked}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text" name="DateBooked" id="dob" [(ngModel)]="edituserobj.DateBooked"></span>
+            </td>
+
+            <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.showTimings}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text" name="showTimings" id= "sht" [(ngModel)]="edituserobj.showTimings"></span>
+            </td>
+
+            <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.ticketsBooked}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text"  name="ticketsBooked" id= "tbook" [(ngModel)]="edituserobj.ticketsBooked" ></span>
+            </td>
+           
+             <td>
+              <span *ngIf="!editstatus || edituserIndex!==idx"> <i>{{user.movieBooked}}</i></span>
+              <span *ngIf="editstatus && edituserIndex===idx"> <input type="text"  name="movieBooked" id= "tbook" [(ngModel)]="edituserobj.movieBooked" ></span>
+            </td>
+            
+           
+            
+            <td><div class="btn-group">
+              <button class="m-2"  *ngIf="!editstatus || edituserIndex!==idx" (click)="onedit(user,idx)"><i class="bi bi-pencil-fill"></i></button>
+              <span>
+
+                <button class="m-2" *ngIf="editstatus && edituserIndex===idx"  type="submit"><i class="bi bi-save2-fill"></i></button>
+              </span>
+            
+            </div></td>
+          </tr>
+          
+        </tbody>
+      </table>
+</form>

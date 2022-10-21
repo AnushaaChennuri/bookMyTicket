@@ -1,0 +1,101 @@
+
+
+
+  <div class="row mb-2 mt-5">
+    <div class="col-md-12">
+      
+      <div class="row g-0   rounded overflow-hidden  flex-md-row  shadow-sm h-md-250 position-relative">
+        <div class="col-lg-2"></div> 
+        <div class="col-lg-4 bg-white">
+            <img src={{details.avatar}} height="400" width="90%">
+          </div>
+
+          <div class="col-lg-5 bg-white ">
+             <div class="hl">
+            <strong class="d-inline-block mb-2 text-primary display-5">{{details.name}}</strong>
+            <div class="mb-1 text-muted">Oct 15</div>
+            <div class="mb-1 text-dark">Cast: {{details.cast}}</div>
+  
+            <p class="card-text bg-white text-dark"><i>{{details.Description}}</i></p>
+          </div></div>
+          </div>
+        </div>
+</div>
+       
+        <div class="row  mt-5 mb-5">
+          <div class="col-lg-2"></div> 
+          <div class="col-lg-3 bg-white">
+              <img src="https://i.pinimg.com/736x/36/47/b1/3647b1857586abf25cda6612840800b4--movie.jpg" height="400" width="90%">
+            </div>
+          <div class="col-lg-6 row bg-white">
+          
+            <form class="mx-3" >
+              <h3 class="text-center"> <i>Book Your Ticket......</i></h3> 
+              <br>
+              <div>
+              <label for="un" class='col-lg-4'>Username:</label>
+              <input type="text" required class='col-lg-7' id="un"  name="username" [(ngModel)]="userModel.username">
+             
+              </div>
+              <br>
+              <div>
+                <label for="pn" class='col-lg-4'>PhoneNumber:</label>
+                <input type="text" required class='col-lg-7' id="pn" name="PhoneNumber" [(ngModel)]="userModel.PhoneNumber">
+                
+              </div>
+                <br>
+            
+                <div>
+                  <label for="date" class='col-lg-4'>Date:</label>
+                  <input type="date" required class='col-lg-7' id="date" name="date" [(ngModel)]="userModel.DateBooked" >
+                  </div>
+                <br>
+                <div>
+                  <label for="ntic" for="tic" class='col-lg-4' >No Of Tickets:</label>
+                  <input type="text" required class='col-lg-7' id="tic"  name="tickets" [(ngModel)]="ticbooked" [(ngModel)]="userModel.ticketsBooked" >
+              
+                  
+                </div>
+               
+                <br>
+                <div>
+                  <div class="btn-group">
+                    <label for="show" class="text-center m-2">Select Show timings : </label>
+                    <button (click)="onone(1)">10:00 AM</button>
+                    <button (click)="onone(2)">2:00 PM</button>
+                    <button (click)="onone(3)">5:00 PM</button>
+                  </div>
+                  
+                 </div>
+                <br> 
+                <button class="btn btn-success mb-3" type="submit" (click)="onAdd(ticbooked)" data-bs-target="#md1" data-bs-toggle="modal"><i class="bi bi-bookmark-heart-fill"></i>Book Now</button>
+            </form>
+               
+                <div class="modal" id="md1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>{{message}}</h4>
+                                
+                               <button class="btn btn-danger"data-bs-dismiss="modal">X</button>
+                            </div>
+                           <div class="modal-body">
+                                <div class="row">
+                                  <div class="col-lg-3"></div>
+                                        <img src={{bookedImage}} class="h-50 w-50">
+                                        <i class="text-center"><i class="bi bi-emoji-laughing-fill"></i> {{bookedstatus}}</i>
+                                     </div>
+                                
+                               
+                           </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+             
+                
+            </div>
+            </div>
+
+

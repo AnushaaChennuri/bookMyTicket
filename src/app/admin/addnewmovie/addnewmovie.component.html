@@ -1,0 +1,31 @@
+<div class="row mt-5">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form (ngSubmit)="oncreate()">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="childModel.name"  placeholder="enter namee">
+                <label for="name">Movie Name</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="avatar"  [(ngModel)]="childModel.avatar" placeholder="enter namee">
+                <label for="img">Image Url</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="noOfTickets"  [(ngModel)]="childModel.noOfTickets" placeholder="enter namee">
+                <label for="img">No of Tickets</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="cast"  [(ngModel)]="childModel.cast" placeholder="enter namee">
+                <label for="img">Movie cast</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="Description"  [(ngModel)]="childModel.Description" placeholder="enter namee">
+                <label for="img">Movie Description</label>
+               </div>
+               <button type="submit" class="btn btn-warning float-end">Add</button>
+        </form>
+        
+    </div>
+   <div class="col-sm-2 col-md-3"></div>
+
+</div>

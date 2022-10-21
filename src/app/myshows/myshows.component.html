@@ -1,0 +1,122 @@
+
+<div class="container m-5 bg-white" >
+  <div>
+    <mat-form-field appearance="standard">
+      <h5>Search Here...<input matInput (keyup)="applyFilter($event)" #input></h5>
+     
+    </mat-form-field>
+    
+    <div class="mat-elevation-z8">
+      <table  class="t1" mat-table [dataSource]="dataSource">
+         
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}}</td>
+        </ng-container>
+
+    
+        <ng-container matColumnDef="Username">
+          <th mat-header-cell *matHeaderCellDef>Username </th>
+          <td mat-cell *matCellDef="let row"> {{row.username}}</td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="Phone Number">
+          <th mat-header-cell *matHeaderCellDef>Phone Number </th>
+          <td mat-cell *matCellDef="let row"> {{row.PhoneNumber}} </td>
+        </ng-container>
+    
+   
+        <ng-container matColumnDef="Date Booked">
+          <th mat-header-cell *matHeaderCellDef>Date Booked </th>
+          <td mat-cell *matCellDef="let row"> {{row.DateBooked}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="Show Timings">
+          <th mat-header-cell *matHeaderCellDef> Show Timings</th>
+          <td mat-cell *matCellDef="let row"> {{row.showTimings}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Movie Booked">
+          <th mat-header-cell *matHeaderCellDef> Movie Name</th>
+          <td mat-cell *matCellDef="let row"> {{row.movieBooked}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="Tickets Booked">
+          <th mat-header-cell *matHeaderCellDef> Tickets Booked </th>
+          <td mat-cell *matCellDef="let row"> {{row.ticketsBooked}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let row"> <button class="b1"  data-bs-target="#md1" data-bs-toggle="modal" (click)="edit(row,row.id)"><i class="bi bi-pencil-fill"></i></button></td>
+        
+        </ng-container>
+
+      
+
+       
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+       
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter </td>
+        </tr>
+       
+
+
+
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons 
+      aria-label="Select page">
+</mat-paginator>
+    </div>
+  </div>
+ </div>
+
+
+ <div class="modal" id="md1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                             <h4>Update Your Details</h4>
+                             <button class="btn btn-danger"data-bs-dismiss="modal">X</button>
+                             </div>
+                           <div class="modal-body">
+                                <div class="row">
+                                  <form>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="name" name="username"  [(ngModel)]="edituserobj.username"   placeholder="enter namee">
+                                        <label for="name">UserName</label>
+                                       </div>
+                                       <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="img" name="PhoneNumber" [(ngModel)]="edituserobj.PhoneNumber"   placeholder="enter namee">
+                                        <label for="PhoneNumber">Phone Number</label>
+                                       </div>
+                                       <div class="form-floating mb-3">
+                                        <input type="date" class="form-control" id="img"  name="DateBooked" [(ngModel)]="edituserobj.DateBooked" placeholder="enter namee">
+                                        <label for="DateBooked">Date Booked</label>
+                                       </div>
+                                       <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" name="showTimings" [(ngModel)]="edituserobj.showTimings"  placeholder="enter namee">
+                                        <label for="showTimings">Show Timings</label>
+                                       </div>
+                                       <div class="form-floating mb-3">
+                                        <input type="text" class="form-control"  name="ticketsBooked"  placeholder="enter namee" [(ngModel)]="edituserobj.ticketsBooked">
+                                        <label for="ticketsBooked">Tickets Booked</label>
+                                       </div>
+                                       <button type="submit" class="btn btn-warning float-end" (click)="onsave()">Save</button>
+                                </form>
+                                
+
+                                     </div>
+                                
+                               
+                           </div>
+                           
+                        </div>
+                    </div>
+                </div>

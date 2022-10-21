@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "username": "Anusha",
+      "PhoneNumber": "8083037777",
+      "DateBooked": "2022-10-17",
+      "showTimings": "10:00AM",
+      "ticketsBooked": "2",
+      "id": 1
+    },
+    {
+      "username": "Anusha",
+      "PhoneNumber": "1234567890",
+      "movieBooked": "Kantara",
+      "DateBooked": "2022-11-05",
+      "showTimings": "5:00PM",
+      "ticketsBooked": "2",
+      "id": 2
+    },
+    {
+      "username": "Anusha",
+      "PhoneNumber": "1234567890",
+      "movieBooked": "Kantara",
+      "DateBooked": "2022-11-05",
+      "showTimings": "5:00PM",
+      "ticketsBooked": "2",
+      "id": 3
+    },
+    {
+      "username": "Ansuha",
+      "PhoneNumber": "1234567898",
+      "DateBooked": "2022-10-13",
+      "showTimings": "2:00PM",
+      "ticketsBooked": "1",
+      "id": 4
+    },
+    {
+      "username": "Ansuha",
+      "PhoneNumber": "1234567898",
+      "movieBooked": "Kantara",
+      "DateBooked": "2022-10-13",
+      "showTimings": "2:00PM",
+      "ticketsBooked": "1",
+      "id": 5
+    },
+    {
+      "username": "Anusha",
+      "PhoneNumber": "9849655022",
+      "movieBooked": "Kantara",
+      "DateBooked": "2022-10-13",
+      "showTimings": "10:00AM",
+      "ticketsBooked": "2",
+      "id": 6
+    },
+    {
+      "username": "user",
+      "PhoneNumber": "1234567890",
+      "movieBooked": "Ghost",
+      "DateBooked": "2022-10-17",
+      "showTimings": "10:00AM",
+      "ticketsBooked": "1",
+      "id": 7
+    },
+    {
+      "username": "harshi",
+      "PhoneNumber": "8083037777",
+      "movieBooked": "Ghost",
+      "DateBooked": "2022-10-17",
+      "showTimings": "10:00AM",
+      "ticketsBooked": "2",
+      "id": 8
+    },
+    {
+      "username": "Harshitha",
+      "PhoneNumber": "9849655022",
+      "movieBooked": "PS-I",
+      "DateBooked": "2022-10-17",
+      "showTimings": "10:00AM",
+      "ticketsBooked": "1",
+      "id": 9
+    }
+  ]
+}
